@@ -19,7 +19,7 @@ RESET_COLOR="\033[0m"
 
 usage()
 {
-    printf "Usage: $0\n"
+    printf "Usage: $0 [option]\n"
     printf "\tazazel -- removes the userland azazel rootkit\n"
     printf "\tjynx2 -- removes the similar (to azazel) userland rootkit\n\n"
 }
