@@ -5,7 +5,7 @@ this script is designed to remove Azazel and Jynx2 from the system. the script u
 # how does it work
 it's rather simple really.</br>
 ## azazel
-Azazel comes with a flaw that allows a user to call symlink() on any protected rootkit files. by utilizing this flaw, we can bypass basic file protection, allowing us to read from files and write to them to. the script initially checks to see if the Azazel shared object file (libselinux.so) exists, then creates a temporary symbolic link to ld.so.preload in /tmp, then writes a temporary value to ld.so.preload via this symbolic link so that the rootkit's shared object file is no longer being loaded. it then proceeds to remove other miscallenous rootkit files, and copies the shared object file to /tmp.
+Azazel comes with a flaw that allows a user to call symlink() on any protected rootkit files. by utilizing this flaw, we can bypass basic file protection, allowing us to read from files and write to them to. the script initially checks to see if the Azazel shared object file (libselinux.so) exists, then creates a temporary symbolic link to ld.so.preload in /tmp, then writes a temporary value to ld.so.preload via this symbolic link so that the rootkit's shared object file is no longer being loaded. it then proceeds to remove other miscellaneous rootkit files, and copies the shared object file to /tmp.
 </br>
 how to patch this? overwrite the symlink() and symlinkat() library symbols and protect your files from those two calls.
 ## jynx2
