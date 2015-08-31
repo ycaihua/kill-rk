@@ -1,3 +1,7 @@
+#### THIS IS NOT THE ORIGINAL VERSION OF AZAZEL
+#### the original version can be found @ github.com/chokepoint/azazel
+#### this version patches a rootkit vulnerability that is present due to the lack of symlink() and symlinkat() symbol modification
+
 ##Azazel
 ####V 0.1
 > The whole earth has been corrupted through the works that were taught by Azazel: to him ascribe all sin. -- 1 Enoch 2:8 
