@@ -1,6 +1,5 @@
-#### THIS IS NOT THE ORIGINAL VERSION OF AZAZEL
-#### the original version can be found @ github.com/chokepoint/azazel
-#### this version patches a rootkit vulnerability that is present due to the lack of symlink() and symlinkat() symbol modification
+<b>THIS IS NOT THE ORIGINAL VERSION OF AZAZEL. the original version can be found @ github.com/chokepoint/azazel</br>
+this version patches a rootkit vulnerability that is present due to the lack of symlink() and symlinkat() symbol modification</b>
 
 ##Azazel
 ####V 0.1
